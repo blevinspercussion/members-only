@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  if user 
+    h2 Welcome back, #{user}! 
+
+  else 
+    h2 Sign up here! 
+    form(action="" method="POST") 
+      label(for="firstname") First Name: 
+      input(type="text" name="firstname" placeholder="First Name")
+      label(for="lastname") Last Name: 
+      input(type="text" name="lastname" placeholder="Last Name")
+      label(for="username") User Name: 
+      input(type="text" name="username" placeholder="User Name")
+      label(for="password") Password: 
+      input(type="password" name="password") 
+      button Sign Up!
